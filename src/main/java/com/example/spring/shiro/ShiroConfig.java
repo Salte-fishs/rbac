@@ -13,6 +13,13 @@ public class ShiroConfig {
         DefaultShiroFilterChainDefinition chainDefinition = new DefaultShiroFilterChainDefinition();
 //       1.配置直接放行的请求
         chainDefinition.addPathDefinition("/register.html","anon");
+        chainDefinition.addPathDefinition("/swagger-ui.html","anon");
+        chainDefinition.addPathDefinition("/doc.html","anon");
+        chainDefinition.addPathDefinition("/webjars/**","anon");
+        chainDefinition.addPathDefinition("/swagger-resources/**","anon");
+        chainDefinition.addPathDefinition("/v2/**","anon");
+        chainDefinition.addPathDefinition("/v2/**","anon");
+
 
 //        2. 需要登录后才可以访问的请求
         chainDefinition.addPathDefinition("/**","authc");
